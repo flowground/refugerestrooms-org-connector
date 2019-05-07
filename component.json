@@ -1,0 +1,98 @@
+{
+    "title": "Refuge Restrooms",
+    "description": "REFUGE is a web application that seeks to provide safe restroom access for transgender, intersex, and gender nonconforming individuals.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/refugerestrooms.org/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://www.refugerestrooms.org/api",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "GET__version_restrooms___format_": {
+            "main": "./lib/actions/GET__version_restrooms___format_.js",
+            "title": "Get all restroom records ordered by date descending.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_restrooms___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_restrooms_by_date___format_": {
+            "main": "./lib/actions/GET__version_restrooms_by_date___format_.js",
+            "title": "Search for restroom records updated or created on or after a given date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_restrooms_by_date___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_restrooms_by_location___format_": {
+            "main": "./lib/actions/GET__version_restrooms_by_location___format_.js",
+            "title": "Search by location.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_restrooms_by_location___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_restrooms_search___format_": {
+            "main": "./lib/actions/GET__version_restrooms_search___format_.js",
+            "title": "Perform full-text search of restroom records.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_restrooms_search___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

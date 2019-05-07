@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer"
+        },
+        "ada": {
+            "required": false,
+            "type": "boolean"
+        },
+        "unisex": {
+            "required": false,
+            "type": "boolean"
+        },
+        "lat": {
+            "required": true,
+            "type": "number",
+            "format": "float"
+        },
+        "lng": {
+            "required": true,
+            "type": "number",
+            "format": "float"
+        }
+    }
+}

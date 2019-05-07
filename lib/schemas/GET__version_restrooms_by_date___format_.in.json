@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer"
+        },
+        "ada": {
+            "required": false,
+            "type": "boolean"
+        },
+        "unisex": {
+            "required": false,
+            "type": "boolean"
+        },
+        "updated": {
+            "required": false,
+            "type": "boolean"
+        },
+        "day": {
+            "required": true,
+            "type": "integer"
+        },
+        "month": {
+            "required": true,
+            "type": "integer"
+        },
+        "year": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

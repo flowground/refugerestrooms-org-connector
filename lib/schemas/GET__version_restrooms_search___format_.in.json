@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer"
+        },
+        "ada": {
+            "required": false,
+            "type": "boolean"
+        },
+        "unisex": {
+            "required": false,
+            "type": "boolean"
+        },
+        "query": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
